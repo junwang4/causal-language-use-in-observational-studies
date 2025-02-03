@@ -11,7 +11,7 @@ logistic linear mixed-effects regression model.
 2. Package dependencies
 
 ```
-packages_to_install <- c("argparse", "data.table", "tidyverse", "tictoc", "lme4")
+packages_to_install <- c("argparse", "ggrepel", "data.table", "tidyverse", "tictoc", "lme4")
 install.packages(packages_to_install)
 ```
 

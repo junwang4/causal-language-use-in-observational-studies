@@ -52,7 +52,7 @@ plot_country_uncertainty_avoidance_index_vs_causal_language_use = function() {
         scale_shape_manual(values = c(17, 19)) +
         geom_text_repel(aes(label = country), color='#000000', size = 3.3, nudge_x = 0, nudge_y = 0.004)
 
-    p <- p + labs( x = "Uncertainty Avoidance Index", y = "Use of causal claims") + theme(
+    p <- p + labs( x = "Uncertainty Avoidance Index (UAI)", y = "Use of Causal Language") + theme(
         legend.position = "none",
         axis.text = element_text(size = 9.5),  # Adjust the size of tick labels
         axis.title = element_text(size = 10),  # Adjust the size of axis labels
