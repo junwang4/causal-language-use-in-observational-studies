@@ -9,13 +9,6 @@ my_corr_test = function(dt, msg) {
     cat(sprintf("\n%s    Correlation: %.2f    p-value: %.5f", msg, pearson_corr, p_value))
 }
 
-create_filename_for_output = function(namebase, ext='pdf', folder='working/report/pdf') {
-	folder_of_results = folder
-	ifelse(!dir.exists(folder_of_results), dir.create(folder_of_results, recursive=TRUE), FALSE)
-	filename = paste(c(namebase, '.', ext), collapse = '')
-	return (paste(c(folder_of_results, filename), collapse = '/') )
-}
-
 save_fig = function(figname, w = 5, h = 3) {
 	ggsave(figname, plot=last_plot(), width=w, height=h, dpi=300)
 	cat(sprintf('\n- output saved to file: \n  %s\n', figname))
@@ -254,8 +247,6 @@ plot_country_distribution = function(df) {
     cat(country_list_text3)
     cat('\n\n')
     cat(country_list_text4)
-
-	library(ggbreak)
 
     annotation = sprintf('articles by authors from other countries, multiple countries, or unknown countries')
     #country_list_text = 'US: United States\nJP: Japan\nCN: China\nTW: Taiwan'

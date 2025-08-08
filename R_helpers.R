@@ -1,18 +1,19 @@
 #------------------------------------
 #
 load_packages = function() {
-	for (pkg in c("argparse", "data.table", "lme4", "tictoc", "dplyr", "tidyr", "stringr", "ggplot2", "ggrepel")) {
+	for (pkg in c("argparse", "data.table", "lme4", "tictoc", "dplyr", "tidyr", "stringr", "ggplot2", "ggrepel", "ggbreak")) {
 		suppressMessages(require(pkg, character.only = TRUE))
 	}
 }
 
 #------------------------------------
 #
-create_filename_for_output = function(namebase, ext='csv', folder_output='working') {
-	ifelse(!dir.exists(folder_output), dir.create(folder_output, recursive=TRUE), FALSE)
+create_filename_for_output = function(namebase, ext='pdf', folder='working/report/pdf') {
+	ifelse(!dir.exists(folder), dir.create(folder, recursive=TRUE), FALSE)
 	filename = paste(c(namebase, '.', ext), collapse = '')
-	return (paste(c(folder_output, filename), collapse = '/') )
+	return (paste(c(folder, filename), collapse = '/') )
 }
+
 
 process_gender <- function(vec, male_min_confidence, female_min_confidence) {
   fcase(

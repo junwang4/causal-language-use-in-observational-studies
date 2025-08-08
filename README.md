@@ -14,7 +14,7 @@ git clone https://github.com/junwang4/causal-language-use-in-observational-studi
 ### 2. Package dependencies
 
 ```
-packages_to_install <- c("argparse", "ggrepel", "data.table", "tidyverse", "tictoc", "lme4", "stringr", "ggplot2", "dplyr", "tidyr")
+packages_to_install <- c("argparse", "ggrepel", "data.table", "tidyverse", "tictoc", "lme4", "stringr", "ggplot2", "ggbreak", "dplyr", "tidyr")
 install.packages(packages_to_install)
 ```
 
