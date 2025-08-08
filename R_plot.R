@@ -257,16 +257,16 @@ plot_country_distribution = function(df) {
 	font2 = "sans"
   fs1 = 3.6	
   fs2 = 3.6	
-	y_base = 2000
+	y_base = 2500
 	ggplot(data=df, aes(x=country, y=count)) +
 		geom_bar(stat="identity", fill='#56B4E9') +
-		scale_y_continuous(breaks = seq(0, 14000, by = 500)) +
-		scale_y_break(c(5000, 13000)) +
+		scale_y_continuous(breaks = seq(0, 14500, by = 500)) +
+		scale_y_break(c(6000, 13500)) +
 
 		#geom_text(aes(label = count), vjust = -0.3, size=3) +
 		#xlab('Country code') + ylab('Number of Observational Studies') +
 		xlab('') + ylab('Number of Observational Studies') +
-		geom_segment(x = as.factor('CN'), y = 20500, xend = as.factor('US'), yend = 20500, arrow = arrow(length = unit(0.2, "cm"))) +
+		#geom_segment(x = as.factor('CN'), y = 20500, xend = as.factor('US'), yend = 20500, arrow = arrow(length = unit(0.2, "cm"))) +
 
 		geom_text(family = font1, label = country_list_text1, check_overlap = TRUE, x = as.factor('BR'), size = fs1, y = y_base, vjust = 0, hjust = 0) +
 		geom_text(family = font2, label = country_list_text1_2, check_overlap = TRUE, x = as.factor('CA'), size = fs2, y = y_base, vjust = 0, hjust = 0) +
