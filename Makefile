@@ -49,7 +49,7 @@ PLOT_TASKS = \
     country_distribution \
     author_experience_distribution \
     team_size_distribution \
-    country_UAI_vs_causal_language
+    country_UAI_vs_causal_language_use
 
 plots: $(PLOT_TASKS)
 
