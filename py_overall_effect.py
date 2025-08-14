@@ -68,7 +68,7 @@ _study_design_list_
 \multicolumn{4}{@{}l}{\textbf{Random Effects}} \\ [.05in]
  \multicolumn{4}{l}{Journal ISSN} \\
  \multicolumn{4}{l}{Publication year} \\
- \multicolumn{4}{l}{Conclusion size (num of sentences)} \\ [.03in]
+ \multicolumn{4}{l}{Conclusion length (num of sentences)} \\ [.03in]
 
 \end{tabular} \\
 

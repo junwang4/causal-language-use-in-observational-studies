@@ -322,7 +322,9 @@ plot_num_papers_per_author_distribution = function(df) {
 	df[, first_author_paper_cnt:=.N, by = list(author_id_first)]
 	df[, last_author_paper_cnt:=.N, by = list(author_id_last)]
 
-	print(df[1,]$papers_first)
+	#print(df[1,]$papers_first)
+	print(df[first_author_paper_cnt %in% head(sort(unique(first_author_paper_cnt), decreasing = TRUE), 1), .(first_author_paper_cnt, pmid, author_id_first)])
+	print(df[last_author_paper_cnt %in% head(sort(unique(last_author_paper_cnt), decreasing = TRUE), 1), .(last_author_paper_cnt, pmid, author_id_last)])
 
 	dt_first = unique(df[, .(author_id_first, first_author_paper_cnt)])
 	dt_last = unique(df[, .(author_id_last, last_author_paper_cnt)])
