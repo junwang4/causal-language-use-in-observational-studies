@@ -1,7 +1,7 @@
 ## Introduction
 
 This repository contains the code for the
-paper `Causal Language in Observational Studies: Sociocultural Backgrounds and Team Composition`.
+paper `Who Is More Likely to Make Causal Claims in Observational Studies? The Role of Author Experience, Team Size, Cultural Background, and Gender in Scientific Framing`.
 The main code is written in R and uses the `lme4` package to fit the
 logistic linear mixed-effects regression model.
 
